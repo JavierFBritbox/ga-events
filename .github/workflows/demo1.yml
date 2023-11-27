@@ -3,6 +3,11 @@ on:
   pull_request:
     branches: master
     types: [opened, edited]
+  workflow_dispatch: 
+  push:
+    paths-ignore: '.github/*'
+    branches: 
+      - master
 jobs:
   deploy:
     runs-on: ubuntu-latest
